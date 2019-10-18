@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using Modelo;
+using System.Linq;
 
 namespace Programa
 {
@@ -7,23 +9,24 @@ namespace Programa
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Equipos :");
-            foreach (var e in LigaDAO.Instance.Equipos)
-            {
-                Console.WriteLine("\t" + e);
-            }
+            List<Equipo> equipos = LigaDAO.Instance.Equipos;
+            List<Jugador> jugadores = LigaDAO.Instance.Jugadores;
+            List<Partido> partidos = LigaDAO.Instance.Partidos;
 
-            Console.WriteLine("Jugadores:");
-            foreach (var j in LigaDAO.Instance.Jugadores)
-            {
-                Console.WriteLine("\t" + j);
-            }
+            //Ejercicio 1
+
+            Console.WriteLine("Equipos :");
+            equipos.ForEach(Console.WriteLine);
+
+            Console.WriteLine("Jugadores :");
+            jugadores.ForEach(Console.WriteLine);
 
             Console.WriteLine("Partidos:");
-            foreach (var p in LigaDAO.Instance.Partidos)
-            {
-                Console.WriteLine("\t" + p);
-            }
+            partidos.ForEach(Console.WriteLine);
+
+            //Ejercicio 2
+
+
 
             Console.ReadLine();
 
