@@ -6,12 +6,12 @@ namespace Modelo
 {
     public class Partido
     {
-        int Id { get; }
-        Equipo Local { get; }
-        Equipo Visitante { get; }
-        string Resultado { get; }
-        DateTime Fecha { get; }
-        string Arbitro { get; }
+        public int Id { get; }
+        public Equipo Local { get; }
+        public Equipo Visitante { get; }
+        public string Resultado { get; }
+        public DateTime Fecha { get; }
+        public string Arbitro { get; }
 
         private Partido(int id, Equipo local, Equipo visitante, string resultado, DateTime fecha, string arbitro)
         {
